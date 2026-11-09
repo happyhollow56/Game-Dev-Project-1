@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/question_block.gd" id="1_qblock_script"]
+[ext_resource type="Texture2D" path="res://sprites/tiles/question.png" id="2_qblock_texture"]
+[ext_resource type="PackedScene" path="res://scenes/pickup.tscn" id="3_flower_scene"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qblock"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhead"]
+size = Vector2(56, 14)
+
+[node name="QuestionBlock" type="StaticBody2D"]
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1_qblock_script")
+flower_scene = ExtResource("3_flower_scene")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qblock")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qblock_texture")
+
+[node name="HeadDetector" type="Area2D" parent="."]
+position = Vector2(0, 35)
+collision_layer = 0
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadDetector"]
+shape = SubResource("RectangleShape2D_qhead")
+
+[connection signal="body_entered" from="HeadDetector" to="." method="_on_head_detector_body_entered"]

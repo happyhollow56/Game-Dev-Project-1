@@ -1,0 +1,38 @@
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://dgyqie7ax27dp"]
+
+[ext_resource type="Texture2D" uid="uid://eh62ufphank8" path="res://sprites/tiles/ground.png" id="1_ground"]
+[ext_resource type="Texture2D" uid="uid://baclxsbqly1tb" path="res://sprites/tiles/brick.png" id="2_brick"]
+[ext_resource type="Texture2D" uid="uid://bu6r8g75qwd50" path="res://sprites/tiles/question.png" id="3_question"]
+[ext_resource type="Texture2D" uid="uid://dqdqx8obqxyeg" path="res://sprites/tiles/stone.png" id="4_stone"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ground"]
+texture = ExtResource("1_ground")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brick"]
+texture = ExtResource("2_brick")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_question"]
+texture = ExtResource("3_question")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_stone"]
+texture = ExtResource("4_stone")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[resource]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ground")
+sources/1 = SubResource("TileSetAtlasSource_brick")
+sources/2 = SubResource("TileSetAtlasSource_question")
+sources/3 = SubResource("TileSetAtlasSource_stone")

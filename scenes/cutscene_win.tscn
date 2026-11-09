@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/cutscene.gd" id="1_cutscene"]
+
+[node name="CutsceneWin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cutscene")
+story = "You made it home with enough flowers! Your wife accepts the bouquet, the raccoons are finally behind you, and peace returns to the household."
+button_a_text = "Play Again"
+button_b_text = "Quit"
+next_scene = "res://scenes/cutscene_start.tscn"
+reset_on_start = true
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -150.0
+offset_right = 420.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "SUCCESS!"
+horizontal_alignment = 1
+
+[node name="Story" type="Label" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = ""
+autowrap_mode = 3
+horizontal_alignment = 1
+
+[node name="ButtonA" type="Button" parent="VBox"]
+layout_mode = 2
+text = "Play Again"
+
+[node name="ButtonB" type="Button" parent="VBox"]
+layout_mode = 2
+text = "Quit"

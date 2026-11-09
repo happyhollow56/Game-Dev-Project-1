@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhntm1paqj2e2"]
+
+[ext_resource type="Script" path="res://scripts/cutscene.gd" id="1_cutscene"]
+
+[node name="CutsceneStart" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cutscene")
+story = "Your cat had a wild night at the bar and drank far too much milk. Your wife is furious. Cross the park, avoid the raccoons you annoyed, and collect at least 12 flowers to make things right!"
+button_b_text = "Quit"
+reset_on_start = true
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -150.0
+offset_right = 420.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "THE FLOWER RUN"
+horizontal_alignment = 1
+
+[node name="Story" type="Label" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonA" type="Button" parent="VBox"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="ButtonB" type="Button" parent="VBox"]
+layout_mode = 2
+text = "Quit"
