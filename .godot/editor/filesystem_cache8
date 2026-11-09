@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1794256006
+::res://::1794256213
 tileset.tres::TileSet::7630926196799410621::1794255660::0::1::::<><>::uid://eh62ufphank8::::res://sprites/tiles/ground.png<>uid://baclxsbqly1tb::::res://sprites/tiles/brick.png<>uid://bu6r8g75qwd50::::res://sprites/tiles/question.png<>uid://dqdqx8obqxyeg::::res://sprites/tiles/stone.png
 ::res://scenes/::1794255971
 cutscene_fail.tscn::PackedScene::-1::1794255579::0::1::::<><>::res://scripts/cutscene.gd

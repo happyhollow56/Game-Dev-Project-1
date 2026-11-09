@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://bnc1tsx8j4y7v"]
 
 [ext_resource type="Script" path="res://scripts/cutscene.gd" id="1_cutscene"]
 
@@ -10,7 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cutscene")
-story = "You made it home with enough flowers! Your wife accepts the bouquet, the raccoons are finally behind you, and peace returns to the household."
+story = "You made it home with enough flowers! Your wife accepts the bouquet, the evil cats are finally behind you, and peace returns to the household."
 button_a_text = "Play Again"
 button_b_text = "Quit"
 next_scene = "res://scenes/cutscene_start.tscn"
@@ -40,9 +40,8 @@ horizontal_alignment = 1
 [node name="Story" type="Label" parent="VBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = ""
-autowrap_mode = 3
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="ButtonA" type="Button" parent="VBox"]
 layout_mode = 2
